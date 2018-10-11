@@ -164,7 +164,7 @@ public class AnimalTest
 
 	private void checkCharacteristics(Animal animal, String[] expected)
 	{
-		assertNotNull(animal.getName() + " doesn't have the expected values", expected);
+		assertNotNull(animal.getName() + " doesn't have the expected values ", expected);
 		List<String> characteristics = animal.getCharacteristics();
 		Arrays.sort(expected);
 		characteristics.sort(String::compareTo);

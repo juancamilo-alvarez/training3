@@ -1,19 +1,29 @@
 package com.talos.javatraining.lesson3.impl.animals;
 
-import com.talos.javatraining.lesson3.AnimalSupport;
+import com.talos.javatraining.lesson3.Bird;
 import com.talos.javatraining.lesson3.impl.AbstractAnimal;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
-public class Hen extends AbstractAnimal
+public class Hen extends AbstractAnimal implements Bird
 {
+
 	@Override
-	public List<String> getCharacteristics()
+	public String getFullDescription()
 	{
-		List<String> characteristics = new ArrayList<>(AnimalSupport.getBirdCharacteristics());
+		return null;
+	}
+
+	@Override
+	public List<String> getParentCharacteristics()
+	{
+		return Bird.super.getCharacteristics();
+	}
+
+	@Override
+	public void populateCharacteristics(List<String> characteristics)
+	{
 		characteristics.add("They don't fly");
-		return characteristics;
 	}
 }
